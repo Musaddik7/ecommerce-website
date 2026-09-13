@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Product Images */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Product Card Hover */
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Hero Image */
+section img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 6px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+}

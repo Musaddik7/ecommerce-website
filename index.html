@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fashion Store</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#">
+            Fashion Store
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Search Bar -->
+<form class="d-flex me-3" onsubmit="return false;">
+    <input type="text"
+           id="searchInput"
+           class="form-control"
+           placeholder="Search products..."
+           onkeyup="searchProducts()">
+</form>
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Products</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#categories">Categories</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#cart">🛒 Cart</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="bg-light py-5" id="home">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold">
+                    Discover Your Style
+                </h1>
+
+                <p class="lead">
+                    Trendy T-Shirts, Shirts, Caps and Sunglasses
+                    at the best price.
+                </p>
+
+                <a href="#" class="btn btn-dark btn-lg">
+                    Shop Now
+                </a>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <img src="image/ts.jpg"
+                
+                     class="img-fluid rounded"
+                     alt="Fashion">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="py-5" id="categories">
+    <div class="container">
+
+        <h2 class="text-center fw-bold mb-4">
+            Shop By Category
+        </h2>
+
+        <div class="row g-4">
+
+            <div class="col-6 col-md-3">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>👕</h3>
+                        <h5 class="card-title">T-Shirts</h5>
+                        <p class="card-text">
+                            Stylish T-Shirts
+                        </p>
+                        <a href="#products" class="btn btn-dark">
+                            View Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>👔</h3>
+                        <h5 class="card-title">Shirts</h5>
+                        <p class="card-text">
+                            Premium Shirts
+                        </p>
+                        <a href="#products" class="btn btn-dark">
+                            View Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>🧢</h3>
+                        <h5 class="card-title">Head Caps</h5>
+                        <p class="card-text">
+                            Trendy Caps
+                        </p>
+                        <a href="#products" class="btn btn-dark">
+                            View Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="card text-center shadow-sm h-100">
+                    <div class="card-body">
+                        <h3>🕶️</h3>
+                        <h5 class="card-title">Sunglasses</h5>
+                        <p class="card-text">
+                            Stylish Sunglasses
+                        </p>
+                        <a href="#products" class="btn btn-dark">
+                            View Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="bg-light py-5" id="products">
+    <div class="container">
+
+        <h2 class="text-center fw-bold mb-4">
+            Our Products
+        </h2>
+
+        <div class="row g-4">
+
+            <!-- Product 1 -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="image/T-S.jpeg"
+                         class="card-img-top"
+                         alt="T-Shirt">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Classic T-Shirt</h5>
+                        <p class="text-muted">৳ 650</p>
+                        <div class="mb-2">
+    ⭐⭐⭐⭐⭐ <small class="text-muted">(4.8)</small>
+</div>
+                        <p>Comfortable cotton T-Shirt.</p>
+                        <a href="#checkout" class="btn btn-outline-dark w-100 mb-2">
+    Buy Now
+</a>
+                        <button class="btn btn-dark w-100"
+        onclick="addToCart('Classic T-Shirt', 650)">
+    Add to Cart
+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="image/Shirt.jpeg"
+                         class="card-img-top"
+                         alt="Shirt">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Premium Shirt</h5>
+                        <p class="text-muted">৳ 950</p>
+                        <div class="mb-2">
+    ⭐⭐⭐⭐⭐ <small class="text-muted">(4.8)</small>
+</div>
+                        <p>Stylish formal shirt.</p>
+                        <a href="#checkout" class="btn btn-outline-dark w-100 mb-2">
+    Buy Now
+</a>
+                        <button class="btn btn-dark w-100"
+        onclick="addToCart('Classic T-Shirt', 650)">
+    Add to Cart
+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="image/T-S.jpeg"
+                         class="card-img-top"
+                         alt="Cap">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Fashion Cap</h5>
+                        <p class="text-muted">৳ 450</p>
+                        <div class="mb-2">
+    ⭐⭐⭐⭐⭐ <small class="text-muted">(4.8)</small>
+</div>
+                        <p>Trendy and comfortable cap.</p>
+                        <a href="#checkout" class="btn btn-outline-dark w-100 mb-2">
+    Buy Now
+</a>
+                        <button class="btn btn-dark w-100"
+        onclick="addToCart('Classic T-Shirt', 650)">
+    Add to Cart
+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="image/glassess.jpeg"
+                         class="card-img-top"
+                         alt="Sunglasses">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Sunglasses</h5>
+                        <p class="text-muted">৳ 750</p>
+                        <div class="mb-2">
+    ⭐⭐⭐⭐⭐ <small class="text-muted">(4.8)</small>
+</div>
+                        <p>Modern stylish sunglasses.</p>
+                        <a href="#checkout" class="btn btn-outline-dark w-100 mb-2">
+    Buy Now
+</a>
+                       <button class="btn btn-dark w-100"
+        onclick="addToCart('Classic T-Shirt', 650)">
+    Add to Cart
+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="image/Shirt.jpeg"
+                         class="card-img-top"
+                         alt="T-Shirt">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Oversized T-Shirt</h5>
+                        <p class="text-muted">৳ 800</p>
+                        <div class="mb-2">
+    ⭐⭐⭐⭐⭐ <small class="text-muted">(4.8)</small>
+</div>
+                        <p>Trendy oversized design.</p>
+                       <a href="#checkout" class="btn btn-outline-dark w-100 mb-2">
+    Buy Now
+</a>
+                        <button class="btn btn-dark w-100"
+        onclick="addToCart('Classic T-Shirt', 650)">
+    Add to Cart
+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="image/Shirt.jpeg"
+                         class="card-img-top"
+                         alt="Shirt">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Casual Shirt</h5>
+                        <p class="text-muted">৳ 850</p>
+                        <div class="mb-2">
+    ⭐⭐⭐⭐⭐ <small class="text-muted">(4.8)</small>
+</div>
+                        <p>Perfect for casual wear.</p>
+                        <a href="#checkout" class="btn btn-outline-dark w-100 mb-2">
+    Buy Now
+</a>
+                        <button class="btn btn-dark w-100"
+        onclick="addToCart('Classic T-Shirt', 650)">
+    Add to Cart
+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="image/Cap.jpeg"
+                         class="card-img-top"
+                         alt="Cap">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Sport Cap</h5>
+                        <p class="text-muted">৳ 500</p>
+                        <div class="mb-2">
+    ⭐⭐⭐⭐⭐ <small class="text-muted">(4.8)</small>
+</div>
+                        <p>Perfect for outdoor activities.</p>
+                        <a href="#checkout" class="btn btn-outline-dark w-100 mb-2">
+    Buy Now
+</a>
+                        <button class="btn btn-dark w-100"
+        onclick="addToCart('Classic T-Shirt', 650)">
+    Add to Cart
+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="col-6 col-md-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="image/Cap.jpeg"
+                         class="card-img-top"
+                         alt="Sunglasses">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Premium Glasses</h5>
+                        <p class="text-muted">৳ 1200</p>
+                        <div class="mb-2">
+    ⭐⭐⭐⭐⭐ <small class="text-muted">(4.8)</small>
+</div>
+                        <p>Premium stylish sunglasses.</p>
+                        <a href="#checkout" class="btn btn-outline-dark w-100 mb-2">
+    Buy Now
+</a>
+                        <button class="btn btn-dark w-100"
+        onclick="addToCart('Classic T-Shirt', 650)">
+    Add to Cart
+</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Shopping Cart Section -->
+<section class="py-5" id="cart">
+    <div class="container">
+
+        <h2 class="text-center fw-bold mb-4">
+            Shopping Cart
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-8">
+
+    <div class="card shadow-sm">
+    <div class="card-body">
+
+        <div id="cartItems">
+            <p class="text-muted">
+                Your cart is empty.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="col-md-4">
+
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <h4>Cart Summary</h4>
+
+                        <hr>
+
+                     <div class="d-flex justify-content-between">
+    <span>Subtotal</span>
+    <strong id="subtotal">৳ 0</strong>
+</div>
+
+<div class="d-flex justify-content-between mt-2">
+    <span>Delivery</span>
+    <strong id="delivery">৳ 60</strong>
+</div>
+
+<hr>
+
+<div class="d-flex justify-content-between">
+    <strong>Total</strong>
+    <strong id="total">৳ 60</strong>
+</div>
+
+                        <a href="#checkout" class="btn btn-dark w-100 mt-3">
+    Proceed to Checkout
+</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Checkout Section -->
+<section class="bg-light py-5" id="checkout">
+    <div class="container">
+
+        <h2 class="text-center fw-bold mb-4">
+            Checkout
+        </h2>
+
+        <div class="row">
+
+            <!-- Customer Information -->
+            <div class="col-md-7">
+
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <h4 class="mb-4">Customer Information</h4>
+
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control"
+                                   placeholder="Enter your name">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control"
+       placeholder="01XXXXXXXXX"
+       id="customerPhone"
+       required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control"
+                                   placeholder="Enter your email">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Delivery Address</label>
+                            <textarea class="form-control" rows="3"
+          placeholder="Enter your address"
+          id="customerAddress"
+          required></textarea>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Payment -->
+            <div class="col-md-5">
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+
+            <h4 class="mb-4">Payment Method</h4>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input"
+                       type="radio"
+                       name="payment"
+                       id="cod"
+                       checked
+                       onchange="showPaymentForm()">
+
+                <label class="form-check-label" for="cod">
+                    Cash on Delivery
+                </label>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input"
+                       type="radio"
+                       name="payment"
+                       id="bkash"
+                       onchange="showPaymentForm()">
+
+                <label class="form-check-label" for="bkash">
+                    bKash
+                </label>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input"
+                       type="radio"
+                       name="payment"
+                       id="nagad"
+                       onchange="showPaymentForm()">
+
+                <label class="form-check-label" for="nagad">
+                    Nagad
+                </label>
+            </div>
+
+            <div class="form-check mb-4">
+                <input class="form-check-input"
+                       type="radio"
+                       name="payment"
+                       id="card"
+                       onchange="showPaymentForm()">
+
+                <label class="form-check-label" for="card">
+                    Credit / Debit Card
+                </label>
+            </div>
+
+            <!-- Payment Form -->
+            <div id="paymentForm" class="mb-4"></div>
+
+            <hr>
+
+            <div class="d-flex justify-content-between">
+                <strong>Total Amount</strong>
+                <strong id="checkoutTotal">৳ 0</strong>
+            </div>
+
+            <button class="btn btn-dark w-100 mt-4"
+                    onclick="placeOrder()">
+                Place Order
+            </button>
+
+        </div>
+    </div>
+
+</div>
+
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section class="py-5" id="about">
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-3">
+                    About Fashion Store
+                </h2>
+
+                <p>
+                    Fashion Store is an online fashion shop
+                    where customers can find stylish and
+                    affordable fashion products.
+                </p>
+
+                <p>
+                    We offer quality T-Shirts, Shirts, Head Caps
+                    and Sunglasses for everyday fashion.
+                </p>
+
+                <button class="btn btn-dark">
+                    Learn More
+                </button>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <div class="display-1">
+                    👕 🧢 🕶️
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="bg-light py-5" id="contact">
+    <div class="container">
+
+        <h2 class="text-center fw-bold mb-4">
+            Contact Us
+        </h2>
+
+        <div class="row">
+
+            <!-- Contact Information -->
+            <div class="col-md-5 mb-4">
+
+                <h4>Get In Touch</h4>
+
+                <p class="mt-3">
+                    📍 Chattogram, Bangladesh
+                </p>
+
+                <p>
+                    📞 +880 1XXXXXXXXX
+                </p>
+
+                <p>
+                    📧 info@nfashion.com
+                </p>
+
+                <p>
+                    We are always ready to help our customers.
+                </p>
+
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-7">
+
+                <div class="card shadow-sm">
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control"
+       placeholder="Enter your name"
+       id="customerName"
+       required>
+                                   
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                           <input type="email" class="form-control"
+       placeholder="Enter your email"
+       id="customerEmail"
+       required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control"
+                                      rows="4"
+                                      placeholder="Write your message"></textarea>
+                        </div>
+
+                        <button class="btn btn-dark">
+                            Send Message
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-3">
+                <h5>Fashion Store</h5>
+                <p>
+                    Your trusted online fashion store.
+                </p>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <h5>Quick Links</h5>
+
+                <a href="#home" class="text-white text-decoration-none d-block">
+                    Home
+                </a>
+
+                <a href="#about" class="text-white text-decoration-none d-block">
+                    About
+                </a>
+
+                <a href="#contact" class="text-white text-decoration-none d-block">
+                    Contact
+                </a>
+
+                <a href="#cart" class="text-white text-decoration-none d-block">
+                    Cart
+                </a>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <h5>Follow Us</h5>
+
+                <p>
+                    Facebook | Instagram | YouTube
+                </p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="text-center mb-0">
+            © 2026 Fashion Store. All Rights Reserved.
+        </p>
+
+    </div>
+</footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="sty.js"></script>
+
+</body>
+</html>
